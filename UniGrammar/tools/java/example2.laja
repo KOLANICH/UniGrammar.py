@@ -1,0 +1,18 @@
+//https://github.com/tengstrand/Laja/blob/master/LICENCE.txt
+//GPL-3.0
+
+grammar example2 {
+	s = [" "]+;
+	newline = "\r\n" | "\n";
+
+	letter = "a".."z";
+	digit = "0".."9";
+	label = letter [digit|letter]+;
+	row = label ":" s [!(newline|END)+]:value [newline];
+	example2 = row+;
+
+	Row row.setLabel(String label);
+	row.setValue(String value);
+
+	Example2 example2.addRow(Row row);
+}

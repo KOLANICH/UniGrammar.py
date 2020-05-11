@@ -1,0 +1,6 @@
+[MESSAGES CONTROL]
+disable=invalid-name, missing-docstring, no-else-return, C0330, too-few-public-methods
+
+[FORMAT]
+max-line-length=100500
+indent-string='\t'
